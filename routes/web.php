@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ChisteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/', 'ChisteController@obtener@index');
+
+
+*/
+Route::get('/cover', function () {
+    return view('mainView');
+});
+// Ruta para obtener las categorías de chistes
+Route::get('/chistes', [ChisteController::class, 'index']);
+Route::post('/chistes/random', [ChisteController::class, 'obtenerChiste']);
+Route::get('/chistes/random', [ChisteController::class, 'obtenerChiste']);
+
+
+
+
