@@ -24,7 +24,10 @@
             color:orange;
             margin-top: 185px;
         }
-
+        .action ul{
+            list-style: none;
+            padding-left: 0;
+        }
         .document-container {
             background: #fff;
             max-width: 800px;
@@ -43,6 +46,7 @@
     </div>
     <div class="action">
         @yield("action-execute")
+
     </div>
     <div class="container-selector">
         @yield("selector")

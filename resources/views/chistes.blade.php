@@ -20,8 +20,5 @@
     <button type="submit">Obtener chiste</button>
 </form>
 
-</form>
-
-
-
 @endsection
+session_set_cookie_params(0);
